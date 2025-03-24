@@ -33,8 +33,8 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -71,7 +71,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(197, 329);
             this.listBox1.TabIndex = 0;
-            this.listBox1.SelectedValueChanged += new System.EventHandler(this.listBox1_SelectedValueChanged);
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // panel2
             // 
@@ -90,14 +90,6 @@
             this.panel3.Size = new System.Drawing.Size(608, 372);
             this.panel3.TabIndex = 2;
             // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(0, 43);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(600, 329);
-            this.listBox2.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.Location = new System.Drawing.Point(6, 9);
@@ -106,6 +98,14 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Tabelas";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(0, 43);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(600, 329);
+            this.listBox2.TabIndex = 2;
             // 
             // dataGridView1
             // 

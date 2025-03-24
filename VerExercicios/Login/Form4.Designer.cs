@@ -283,7 +283,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Login.Properties.Resources.folder;
+            this.pictureBox1.Image = global::BDS.Properties.Resources.folder;
             this.pictureBox1.Location = new System.Drawing.Point(11, 15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 23);

@@ -15,6 +15,7 @@ using MySqlX.XDevAPI.Common;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
+using System.Configuration;
 
 namespace Login
 {
@@ -35,23 +36,23 @@ namespace Login
         {
             label2.Text = currentUser;
             comboBox1.SelectedIndex = 0;
-            pictureBox1.BackgroundImage = Properties.Resources.folder;
+            pictureBox1.BackgroundImage = BDS.Properties.Resources.folder;
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox2.BackgroundImage = Properties.Resources.folder1;
+            pictureBox2.BackgroundImage = BDS.Properties.Resources.folder1;
             pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
             button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            button3.BackgroundImage = Properties.Resources.run;
+            button3.BackgroundImage = BDS.Properties.Resources.run;
             button3.BackgroundImageLayout = ImageLayout.Stretch;
             button3.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            pictureBox3.BackgroundImage = Properties.Resources.login;
+            pictureBox3.BackgroundImage = BDS.Properties.Resources.login;
             pictureBox3.BackgroundImageLayout = ImageLayout.Stretch;
-            button4.BackgroundImage = Properties.Resources.database;
+            button4.BackgroundImage = BDS.Properties.Resources.database;
             button4.BackgroundImageLayout = ImageLayout.Stretch;
             button4.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            button5.BackgroundImage = Properties.Resources.newFile;
+            button5.BackgroundImage = BDS.Properties.Resources.newFile;
             button5.BackgroundImageLayout = ImageLayout.Stretch;
             button5.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            button6.BackgroundImage = Properties.Resources.databaseSetup;
+            button6.BackgroundImage = BDS.Properties.Resources.databaseSetup;
             button6.BackgroundImageLayout = ImageLayout.Stretch;
             button6.FlatAppearance.MouseOverBackColor = Color.Transparent;
             lbl_ficheiros.Text = "Ficheiros: 0";
@@ -172,7 +173,11 @@ namespace Login
                 return;
             }
 
-            string connectionString = "Server=127.0.0.1;Port=3308;User Id=root;Password=Sporting-1;";
+            string connectionString = ConfigurationManager.ConnectionStrings["minhaConnectionApp"].ToString()
+            .Replace("hostApp", DatabaseConnector.getDataBase("host"))
+            .Replace("appPort", DatabaseConnector.getDataBase("host_port"))
+            .Replace("userApp", DatabaseConnector.getDataBase("host_user"))
+            .Replace("passApp", DatabaseConnector.getDataBase("host_pass"));
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             try

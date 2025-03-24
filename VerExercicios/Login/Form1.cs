@@ -201,12 +201,12 @@ namespace Login
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             picpass.SizeMode = PictureBoxSizeMode.StretchImage;
-            picpass.Image = Properties.Resources.eye;
-            button3.BackgroundImage = Properties.Resources.log;
+            picpass.Image = BDS.Properties.Resources.eye;
+            button3.BackgroundImage = BDS.Properties.Resources.log;
             button3.BackgroundImageLayout = ImageLayout.Stretch;
             button3.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button3.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            button4.BackgroundImage = Properties.Resources.shutdown;
+            button4.BackgroundImage = BDS.Properties.Resources.shutdown;
             button4.BackgroundImageLayout = ImageLayout.Stretch;
             button4.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button4.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -230,12 +230,12 @@ namespace Login
         {
             if (txt_pass.PasswordChar == '*')
             {
-                picpass.Image = Properties.Resources.hide;
+                picpass.Image = BDS.Properties.Resources.hide;
                 txt_pass.PasswordChar = '\0';
             }
             else
             {
-                picpass.Image = Properties.Resources.eye;
+                picpass.Image = BDS.Properties.Resources.eye;
                 txt_pass.PasswordChar = '*';
             }
             picpass.Refresh();
@@ -243,13 +243,13 @@ namespace Login
 
         private void button4_MouseHover(object sender, EventArgs e)
         {
-            button4.BackgroundImage = Properties.Resources.shutdown2;
+            button4.BackgroundImage = BDS.Properties.Resources.shutdown2;
             button4.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void button4_MouseLeave(object sender, EventArgs e)
         {
-            button4.BackgroundImage = Properties.Resources.shutdown;
+            button4.BackgroundImage = BDS.Properties.Resources.shutdown;
             button4.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
